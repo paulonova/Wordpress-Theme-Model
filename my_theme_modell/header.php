@@ -36,6 +36,7 @@
 	<![endif]-->
 </head>
 
+
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
@@ -60,17 +61,16 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="/"><img src="assets/img/logo.png" alt="Bootstrap to Wordpress"></a>
+						<a class="navbar-brand" href="/"><img src="<?php bloginfo( 'stylesheet_directory' )?>/assets/img/logo.png" alt="Bootstrap to Wordpress"></a>
 					</div>
 
 					<?php 
 						wp_nav_menu( array(
-							'theme_location' 				=> 'primary',
-							'container' 						=> 'nav',
+							'theme_location' 				=> '',
+							'container'							=> 'nav',
+							'menu_class' 						=> 'nav navbar navbar-right menu-flex',
 							'container_class' 			=> 'navbar-collapse collapse',
-							'menu_class' 						=> 'nav navbar navbar-right'
-						));
-					
+						));				
 					
 					?>
 					
@@ -79,3 +79,6 @@
 		
 		</div>
 	</header>
+
+
+	
